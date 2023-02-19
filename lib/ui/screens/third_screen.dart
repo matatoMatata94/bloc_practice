@@ -102,25 +102,6 @@ class _ThirdScreenState extends State<ThirdScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 50),
-            MaterialButton(
-              onPressed: (() {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => BlocProvider.value(
-                          value: BlocProvider.of<CounterCubit>(context),
-                          child: HomeScreen(
-                            color: Colors.red,
-                            title: 'Another Home Screen',
-                          ),
-                        )));
-              }),
-              height: 50,
-              color: widget.color,
-              child: const Text(
-                'Press here for Homescreen',
-                style: TextStyle(fontSize: 20, color: Colors.white),
-              ),
-            )
           ],
         ),
       ),
