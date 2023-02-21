@@ -1,5 +1,4 @@
 import 'package:bloc_practice/brain/cubit/counter_cubit.dart';
-import 'package:bloc_practice/ui/screens/second_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
