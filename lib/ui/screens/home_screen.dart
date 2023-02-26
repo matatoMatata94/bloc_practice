@@ -38,6 +38,45 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              BlocBuilder<InternetCubit, InternetState>(
+                  builder: ((context, state) {
+                if (state is InternetConnected &&
+                    state.connectionType == ConnectionType.wifi) {
+                  return Text(
+                    'Wifi',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline4!
+                        .copyWith(color: Colors.red),
+                  );
+                } else if (state is InternetConnected &&
+                    state.connectionType == ConnectionType.mobile) {
+                  return Text(
+                    'Mobile',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline4!
+                        .copyWith(color: Colors.red),
+                  );
+                } else if (state is InternetDisconnected) {
+                  return Text(
+                    'Disconnected',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline4!
+                        .copyWith(color: Colors.red),
+                  );
+                } else {
+                  return Text(
+                    'Unknown Type of Connection',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline4!
+                        .copyWith(color: Colors.red),
+                  );
+                }
+              })),
+              const SizedBox(height: 50),
               const Text(
                 'You have pushed the button this many times:',
               ),

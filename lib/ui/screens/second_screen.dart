@@ -1,4 +1,6 @@
 import 'package:bloc_practice/brain/cubit/counter_cubit.dart';
+import 'package:bloc_practice/brain/cubit/internet_cubit.dart';
+import 'package:bloc_practice/constants/enum.dart';
 import 'package:bloc_practice/ui/screens/third_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
